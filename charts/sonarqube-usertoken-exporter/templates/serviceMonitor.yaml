@@ -1,0 +1,15 @@
+{{- if .Values.serviceMonitor.enabled -}}
+apiVersion : "monitoring.coreos.com/v1"
+kind : "ServiceMonitor"
+metadata:
+  name: {{ include "sonarqube-usertoken-exporter.fullname" . }}
+  labels:
+    {{- include "sonarqube-usertoken-exporter.labels" . | nindent 4 }}
+spec:
+  endpoints:
+    - port: "http"
+      path: "/metrics"
+  selector:
+    matchLabels:
+      {{- include "sonarqube-usertoken-exporter.labels" . | nindent 8 }}
+{{- end }}
