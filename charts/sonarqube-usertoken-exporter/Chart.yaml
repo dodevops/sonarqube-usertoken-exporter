@@ -1,0 +1,13 @@
+apiVersion: v2
+name: sonarqube-usertoken-exporter
+description: A Helm chart for sonarqube usertoken exporter
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+keywords:
+  - sonarqube
+  - exporter
+  - prometheus
+home: https://github.com/dodevops/sonarqube-usertoken-exporter
+sources:
+  - https://github.com/dodevops/sonarqube-usertoken-exporter
