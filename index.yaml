@@ -3,6 +3,23 @@ entries:
   sonarqube-usertoken-exporter:
   - apiVersion: v2
     appVersion: v0.1.0
+    created: "2025-08-01T10:14:39.005183983Z"
+    description: A Helm chart for sonarqube usertoken exporter
+    digest: ad6a8bb13cf6dd54a141d6a9410ba2c983d730709837db5cce60f371a38d465a
+    home: https://github.com/dodevops/sonarqube-usertoken-exporter
+    keywords:
+    - sonarqube
+    - exporter
+    - prometheus
+    name: sonarqube-usertoken-exporter
+    sources:
+    - https://github.com/dodevops/sonarqube-usertoken-exporter
+    type: application
+    urls:
+    - https://github.com/dodevops/sonarqube-usertoken-exporter/releases/download/sonarqube-usertoken-exporter-0.1.1/sonarqube-usertoken-exporter-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: v0.1.0
     created: "2025-08-01T07:43:26.754337123Z"
     description: A Helm chart for sonarqube usertoken exporter
     digest: 85f8ac7823f25f220d37dd97a1f31a0668200a4620c22ad98283597632426e46
@@ -18,4 +35,4 @@ entries:
     urls:
     - https://github.com/dodevops/sonarqube-usertoken-exporter/releases/download/sonarqube-usertoken-exporter-0.1.0/sonarqube-usertoken-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-01T07:43:26.754358153Z"
+generated: "2025-08-01T10:14:39.005197249Z"
