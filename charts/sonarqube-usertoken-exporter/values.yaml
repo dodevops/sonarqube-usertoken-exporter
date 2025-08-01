@@ -4,6 +4,13 @@
 
 replicaCount: 1
 
+configuration:
+  loglevel: "INFO"
+  url: ""
+  token: ""
+  port: "8081"
+  interval: "60"
+
 image:
   repository: ghcr.io/dodevops/sonarqube-usertoken-exporter
   pullPolicy: IfNotPresent

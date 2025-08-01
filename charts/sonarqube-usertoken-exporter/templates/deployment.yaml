@@ -45,6 +45,17 @@ spec:
             httpGet:
               path: /
               port: http
+          env:
+            - name: EXPORTER_LOGLEVEL
+              value: {{ .Values.configuration.loglevel | quote }}
+            - name: EXPORTER_URL
+              value: {{ .Values.configuration.url | quote }}
+            - name: EXPORTER_TOKEN
+              value: {{ .Values.configuration.token | quote }}
+            - name: EXPORTER_PORT
+              value: {{ .Values.configuration.port | quote }}
+            - name: EXPORTER_INTERVAL
+              value: {{ .Values.configuration.interval | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
