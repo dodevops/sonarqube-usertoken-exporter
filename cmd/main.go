@@ -146,6 +146,9 @@ func main() {
 	recordMetrics(client, time.Duration(args.Interval)*time.Minute)
 
 	logrus.Infof("Starting Sonarqube user token exporter on port %d", args.Port)
+	http.HandleFunc("/health", func(writer http.ResponseWriter, request *http.Request) {
+		writer.WriteHeader(200)
+	})
 	http.Handle("/metrics", promhttp.Handler())
 	if err := http.ListenAndServe(fmt.Sprintf(":%d", args.Port), nil); err != nil {
 		logrus.Errorf("Error starting server: %v", err)
